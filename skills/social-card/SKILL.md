@@ -1,9 +1,9 @@
 ---
-name: x-card
+name: social-card
 description: Turn an attached image, screenshot, chart, announcement, or post graphic into a polished, post-ready social card using the bundled background. Use this skill whenever the user asks to frame, wrap, mount, place, or put an image on a premium or Apple-ish background for X, Twitter, LinkedIn, or social media, even if they do not name this skill. Preserve the supplied image exactly and return a rendered image file.
 ---
 
-# X card
+# Social card
 
 Create a social image from one user-supplied picture. The picture is the content, not a style reference. Keep its text, colors, and composition intact. Scale it proportionally so it dominates the canvas, then soften only its outer corners. The bundled compositor handles layout so the result stays consistent across posts.
 

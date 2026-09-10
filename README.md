@@ -34,7 +34,7 @@ npx skills add huyxdang/Skills.md --skill eli5 -g
 | --- | --- |
 | `bro` | Restating the previous answer in plain language when explicitly invoked with `/bro`. |
 | `eli5` | Building a simple, visual HTML explanation for a topic. |
-| `x-card` | Placing a supplied image on the bundled social-card background. Requires Python 3 and Pillow. |
+| `social-card` | Placing a supplied image on the bundled social-card background. Requires Python 3 and Pillow. |
 
 The canonical package layout is under [`skills/`](skills/). Each skill is a self-contained directory with a required `SKILL.md` and only the resources it needs.
 
