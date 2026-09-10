@@ -1,6 +1,6 @@
 ---
 name: x-card
-description: Turn an attached image, screenshot, chart, announcement, or post graphic into a polished, post-ready social card using the bundled desktop background. Use this skill whenever the user asks to frame, wrap, mount, place, or put an image on a premium or Apple-ish background for X, Twitter, LinkedIn, or social media, even if they do not name this skill. Preserve the supplied image exactly and return a rendered image file.
+description: Turn an attached image, screenshot, chart, announcement, or post graphic into a polished, post-ready social card using the bundled background. Use this skill whenever the user asks to frame, wrap, mount, place, or put an image on a premium or Apple-ish background for X, Twitter, LinkedIn, or social media, even if they do not name this skill. Preserve the supplied image exactly and return a rendered image file.
 ---
 
 # X card
@@ -22,6 +22,8 @@ Create a social image from one user-supplied picture. The picture is the content
      <output-image.png> \
      --preset social-landscape
    ```
+
+The bundled renderer requires Python 3 and Pillow. Install the dependency with `python3 -m pip install -r requirements.txt` when Pillow is not already available.
 
 4. Inspect the exported image. Confirm that the source is uncropped, legible, centered, softly rounded, and free of any frame, matte, border, added text, or logo.
 5. Return the final image as a visible preview and a clickable file link. State the pixel dimensions.

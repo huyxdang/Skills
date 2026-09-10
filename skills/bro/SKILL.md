@@ -1,7 +1,6 @@
 ---
 name: bro
 description: Restate the assistant's immediately previous message in plain, concise, human language. Use only when the user invokes /bro; do not invoke automatically.
-disable-model-invocation: true
 ---
 
 # Bro
