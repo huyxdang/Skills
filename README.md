@@ -7,25 +7,25 @@ A small, portable collection of agent skills for Codex, Claude Code, Cursor, Ope
 Install every skill globally for the agents detected on your machine:
 
 ```bash
-npx skills add huyxdang/Skills.md -g -y
+npx skills add huyxdang/Skills -g -y
 ```
 
 Install every skill globally for every supported agent target:
 
 ```bash
-npx skills add huyxdang/Skills.md --all -g
+npx skills add huyxdang/Skills --all -g
 ```
 
 List the available skills without installing them:
 
 ```bash
-npx skills add huyxdang/Skills.md --list
+npx skills add huyxdang/Skills --list
 ```
 
 Install one skill:
 
 ```bash
-npx skills add huyxdang/Skills.md --skill eli5 -g
+npx skills add huyxdang/Skills --skill eli5 -g
 ```
 
 ## Included skills
