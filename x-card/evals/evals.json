@@ -1,0 +1,23 @@
+{
+  "skill_name": "x-card",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Put this screenshot on my social background for Twitter. I just need the final PNG.",
+      "expected_output": "A 1600x900 PNG with the complete screenshot centered on the X Card background and no added copy.",
+      "files": ["reference-input.png"]
+    },
+    {
+      "id": 2,
+      "prompt": "Make this a square LinkedIn image, and don't alter the screenshot itself.",
+      "expected_output": "A 1200x1200 PNG with the complete unmodified screenshot inside the adaptive frame.",
+      "files": ["reference-input.png"]
+    },
+    {
+      "id": 3,
+      "prompt": "Can you put these three images into that premium social-card style? One output for each image.",
+      "expected_output": "Three separate landscape PNGs, each using the same visual system and preserving its source image.",
+      "files": ["image-a.png", "image-b.jpg", "image-c.webp"]
+    }
+  ]
+}
