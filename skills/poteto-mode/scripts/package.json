@@ -1,0 +1,16 @@
+{
+  "name": "@codex-skill/poteto-mode-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun build watch-pr/main.ts --target=node --format=esm --outfile=dist/watch-pr.mjs && node bundle-integrity.mjs --stamp",
+    "test": "bun test watch-pr && node --test ../tests/*.test.mjs",
+    "typecheck": "tsc --project watch-pr/tsconfig.json --noEmit --strict",
+    "verify": "node validate.mjs .. && node ../tests/read-only-smoke.mjs .."
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "commander": "14.0.0",
+    "typescript": "latest"
+  }
+}

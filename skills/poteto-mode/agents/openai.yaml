@@ -1,0 +1,6 @@
+interface:
+  display_name: "Poteto Mode"
+  short_description: "Run a scoped, evidence-led engineering workflow"
+  default_prompt: "Use $poteto-mode for this task. Preserve my scope and prove the result."
+policy:
+  allow_implicit_invocation: false

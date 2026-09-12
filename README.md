@@ -1,6 +1,6 @@
 # Huy's skills
 
-A small, portable collection of agent skills for Codex, Claude Code, Cursor, OpenCode, and other tools that support the Agent Skills format.
+A small collection of agent skills for Codex, Claude Code, Cursor, OpenCode, and other tools that support the Agent Skills format. Some skills target one agent's capabilities.
 
 ## Install the full pack
 
@@ -28,15 +28,24 @@ Install one skill:
 npx skills add huyxdang/Skills --skill eli5 -g
 ```
 
+For Poteto Mode specifically:
+
+```bash
+npx skills add huyxdang/Skills --skill poteto-mode -g
+```
+
 ## Included skills
 
 | Skill | Use it for |
 | --- | --- |
 | `bro` | Restating the previous answer in plain language when explicitly invoked with `/bro`. |
 | `eli5` | Building a simple, visual HTML explanation for a topic. |
+| `poteto-mode` | Running scoped engineering tasks with Codex-native playbooks, conservative Git handling, and verification. Invoke explicitly with `$poteto-mode`. |
 | `social-card` | Placing a supplied image on the bundled social-card background. Requires Python 3 and Pillow. |
 
 The canonical package layout is under [`skills/`](skills/). Each skill is a self-contained directory with a required `SKILL.md` and only the resources it needs.
+
+Poteto Mode is a Codex-focused adaptation of [Lauren Tan's pstack](https://github.com/cursor/plugins/tree/main/pstack). Its pull-request watcher needs Node.js and the GitHub CLI when used. The skill includes the original MIT notice and the license for its bundled Commander dependency.
 
 ## Updating
 
