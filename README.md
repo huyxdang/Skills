@@ -40,12 +40,15 @@ npx skills add huyxdang/Skills --skill poteto-mode -g
 | --- | --- |
 | `bro` | Restating the previous answer in plain language when explicitly invoked with `/bro`. |
 | `eli5` | Building a simple, visual HTML explanation for a topic. |
+| `emil-design-eng` | Applying Emil Kowalski's design-engineering philosophy to UI polish, components, and animation decisions. |
 | `poteto-mode` | Running scoped engineering tasks with Codex-native playbooks, conservative Git handling, and verification. Invoke explicitly with `$poteto-mode`. |
 | `social-card` | Placing a supplied image on the bundled social-card background. Requires Python 3 and Pillow. |
 
 The canonical package layout is under [`skills/`](skills/). Each skill is a self-contained directory with a required `SKILL.md` and only the resources it needs.
 
 Poteto Mode is a Codex-focused adaptation of [Lauren Tan's pstack](https://github.com/cursor/plugins/tree/main/pstack). Its pull-request watcher needs Node.js and the GitHub CLI when used. The skill includes the original MIT notice and the license for its bundled Commander dependency.
+
+`emil-design-eng` is sourced from [emilkowalski/skills](https://github.com/emilkowalski/skills) and includes its upstream MIT license notice.
 
 ## Updating
 
