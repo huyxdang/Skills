@@ -1,0 +1,4 @@
+interface:
+  display_name: "Automate Me"
+  short_description: "Pstack workflow: automate me"
+  default_prompt: "Use $automate-me for this task."

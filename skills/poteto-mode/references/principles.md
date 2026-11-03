@@ -25,4 +25,7 @@ portable contract when it is not.
 - Sequence Verifiable Units. End each unit with a meaningful check.
 - Guard the Context Window. Delegate bulky independent evidence gathering.
 - Never Block on the Human. Continue reversible work when observation can decide.
+- Attack the Premise. Test a shared assumption after repeated fixes fail.
+- Test Behavior, Not Implementation. A regression test should catch broken behavior and survive internal restructuring.
+- Explain the Number. Check measured work, errors, variance, and bottlenecks.
 - Encode Lessons in Structure. Turn repeated instructions into checks or types.

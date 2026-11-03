@@ -1,0 +1,4 @@
+interface:
+  display_name: "Statechart"
+  short_description: "Pstack workflow: statechart"
+  default_prompt: "Use $statechart for this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Recall"
+  short_description: "Pstack workflow: recall"
+  default_prompt: "Use $recall for this task."

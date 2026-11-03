@@ -1,0 +1,4 @@
+interface:
+  display_name: "Maintain Formal Verification Skill"
+  short_description: "Pstack workflow: maintain formal verification skill"
+  default_prompt: "Use $maintain-formal-verification-skill for this task."

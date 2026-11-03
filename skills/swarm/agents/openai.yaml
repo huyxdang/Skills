@@ -1,0 +1,4 @@
+interface:
+  display_name: "Swarm"
+  short_description: "Pstack workflow: swarm"
+  default_prompt: "Use $swarm for this task."

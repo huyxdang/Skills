@@ -1,0 +1,4 @@
+interface:
+  display_name: "Principle Model The Domain"
+  short_description: "Pstack workflow: principle model the domain"
+  default_prompt: "Use $principle-model-the-domain for this task."

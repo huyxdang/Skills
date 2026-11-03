@@ -1,0 +1,4 @@
+interface:
+  display_name: "Emil Design Eng"
+  short_description: "Polish interface behavior and animation"
+  default_prompt: "Use $emil-design-eng for this task."

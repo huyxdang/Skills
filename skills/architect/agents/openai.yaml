@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architect"
+  short_description: "Pstack workflow: architect"
+  default_prompt: "Use $architect for this task."
