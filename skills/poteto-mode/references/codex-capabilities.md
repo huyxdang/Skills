@@ -9,7 +9,8 @@ tool availability. This skill supplies workflow policy only.
   in-scope implementation work, but not unrelated external effects.
 - Prefer read-only inspection before a write. Ask for permission when the
   environment requires it.
-- Use workspace tools already available. Do not install dependencies at runtime
-  from an installed skill.
+- Use workspace tools already available. Prepare missing dependencies in an isolated workspace when the task authorizes setup; never mutate the installed skill directory or global environment merely by invoking a skill.
 - Keep parallel workers away from the same mutable files, branch, or state.
 - Treat worker output as evidence to review, not as the final answer.
+- Read optional personal and project pstack configuration through the swarm workflow. Inherit models when no preference exists, and never exceed host limits.
+- Shared scope and evidence contracts apply to delegated work; no automatic private checkout is assumed.

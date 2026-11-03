@@ -1,11 +1,11 @@
 ---
 name: bro
-description: Restate the assistant's immediately previous message in plain, concise, human language. Use only when the user invokes /bro; do not invoke automatically.
+description: Restate the assistant's immediately previous message in plain, concise, human language. Use only when the user invokes $bro or /bro; do not invoke automatically.
 ---
 
 # Bro
 
-When the user invokes `/bro`, restate your immediately previous assistant message.
+When the user invokes `$bro` or `/bro`, restate your immediately previous assistant message.
 
 Rules:
 

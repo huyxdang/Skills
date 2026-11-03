@@ -13,7 +13,7 @@ Create a self-contained HTML artifact that explains the user's topic to someone 
 2. Reduce the explanation to the smallest useful story: what it is, how it works, and why it matters. Keep labels short and avoid unexplained jargon.
 3. Write the result as one portable HTML file with inline CSS and inline SVG or other self-contained visuals. Do not depend on a CDN, remote image, external font, JavaScript package, or network request.
 4. Save the artifact under `outputs/` using a descriptive filename such as `eli5-dns.html`, unless the user specifies another location. Do not overwrite an existing file without checking first.
-5. If practical, open or render the HTML locally to catch broken layout or unreadable text, then report the exact file path.
+5. Use available browser or rendering tools to inspect the HTML for broken layout and unreadable text. Report any unavailable visual check. Return an absolute clickable file link; use an inline preview when supported.
 
 ## Output guidance
 

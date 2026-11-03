@@ -1,0 +1,4 @@
+interface:
+  display_name: "No Comments"
+  short_description: "Pstack workflow: no comments"
+  default_prompt: "Use $no-comments for this task."

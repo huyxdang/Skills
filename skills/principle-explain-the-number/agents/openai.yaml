@@ -1,0 +1,4 @@
+interface:
+  display_name: "Principle Explain The Number"
+  short_description: "Pstack workflow: principle explain the number"
+  default_prompt: "Use $principle-explain-the-number for this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Unslop"
+  short_description: "Pstack workflow: unslop"
+  default_prompt: "Use $unslop for this task."

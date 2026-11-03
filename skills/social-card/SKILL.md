@@ -9,7 +9,7 @@ Create a social image from one user-supplied picture. The picture is the content
 
 ## Workflow
 
-1. Resolve the user's attached image to a local file path.
+1. Resolve the user's attached image to a local file path and inspect it with the available image viewer. Save results under the task's output directory unless another destination is requested. Follow the host's image-editing tool requirements; use the deterministic compositor when permitted or explicitly requested. If the host requires another tool and exact pixel preservation cannot be guaranteed, explain the limitation rather than claiming exact preservation.
 2. Choose one preset:
    - `social-landscape` is the default for X and LinkedIn. It exports 1600x900.
    - `square` exports 1200x1200 when the user asks for a square post.
@@ -23,7 +23,7 @@ Create a social image from one user-supplied picture. The picture is the content
      --preset social-landscape
    ```
 
-The bundled renderer requires Python 3 and Pillow. Install the dependency with `python3 -m pip install -r requirements.txt` when Pillow is not already available.
+The bundled renderer requires Python 3 and Pillow. Prefer an existing Python environment with Pillow. If setup is needed and authorized, create a virtual environment in the task workspace and install from `<skill-dir>/requirements.txt`; do not install into the system Python or modify the skill directory.
 
 4. Inspect the exported image. Confirm that the source is uncropped, legible, centered, softly rounded, and free of any frame, matte, border, added text, or logo.
 5. Return the final image as a visible preview and a clickable file link. State the pixel dimensions.
@@ -35,7 +35,7 @@ The bundled renderer requires Python 3 and Pillow. Install the dependency with `
 - Make the supplied image the dominant visual. Keep only a narrow safe area of background around it.
 - Use PNG unless the user asks for JPEG or WebP.
 - Add no caption, headline, handle, watermark, logo, or signature unless the user asks.
-- Do not use image generation. The visual identity comes from the user-selected `assets/background.png`.
+- Prefer the deterministic compositor for exact source preservation, subject to the host requirements above. The visual identity comes from the user-selected `assets/background.png`.
 - If the user supplies several images, render one card per image. Do not combine them unless the user asks for a collage.
 - Name outputs descriptively, such as `launch-note-social.png`, instead of overwriting the source.
 - If the user names no platform or format, use `social-landscape` and proceed without a clarifying question.

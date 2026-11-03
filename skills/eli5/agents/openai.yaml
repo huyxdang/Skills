@@ -1,0 +1,4 @@
+interface:
+  display_name: "Eli5"
+  short_description: "Explain a topic with a clear visual artifact"
+  default_prompt: "Use $eli5 for this task."

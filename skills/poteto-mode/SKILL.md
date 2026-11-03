@@ -1,12 +1,11 @@
 ---
 name: poteto-mode
-description: Use Poteto Mode for scoped, evidence-led engineering work with concise prose, deliberate design, conservative Git handling, and proof against the real artifact. Invoke when the user says poteto, Poteto Mode, or /poteto-mode. Do not invoke for potato, food questions, or unrelated lookalike words.
+description: Use Poteto Mode for scoped, evidence-led engineering work with concise prose, deliberate design, conservative Git handling, and proof against the real artifact. Invoke when the user says poteto, Poteto Mode, or /poteto-mode. Recognize potato mode as a spelling variant in an engineering context. Do not invoke for food questions or unrelated lookalike words.
 ---
 
 # Poteto Mode
 
-Do not activate for `potato`, food questions, or unrelated words that only
-resemble `poteto`.
+Accept `$poteto-mode`, `/poteto-mode`, and “potato mode” when the context is engineering. Do not activate for food questions.
 
 ## Start with a task contract
 
@@ -62,14 +61,27 @@ verification output are enough.
 - Worktree cleanup analysis. `playbooks/worktree-cleanup.md`.
 - Opening a pull request. `playbooks/opening-a-pr.md`.
 
-Read the selected playbook before acting. Preserve each named step. Record an
-explicit reason for any skipped step.
+Read the selected playbook before acting. Keep its evidence and scope requirements; scale optional steps to the task and explain only consequential omissions.
+
+## Supporting workflows
+
+Read a companion only when its trigger applies. Resolve these paths relative to this skill; if a companion is not installed, follow the relevant playbook directly and report any missing capability.
+
+- Understanding runtime flow: `../how/SKILL.md`; historical rationale: `../why/SKILL.md`.
+- Unsettled architecture: `../architect/SKILL.md`; competing designs: `../arena/SKILL.md`.
+- Independent parallel slices: `../swarm/SKILL.md`; adversarial review: `../interrogate/SKILL.md`.
+- Cross-boundary risk: `../blast-radius/SKILL.md`; cheap regression checks: `../tdd/SKILL.md`.
+- Performance claims: `../benchmark-checklist/SKILL.md`.
+- Long-run decision logs: `../show-me-your-work/SKILL.md`; no fitting playbook: `../figure-it-out/SKILL.md`.
+- Missing app verification: `../create-verification-skill/SKILL.md`; formal invariants: `../create-formal-verification-skill/SKILL.md` when warranted.
+- Documentation: `../technical-writing/SKILL.md`; prose cleanup: `../unslop/SKILL.md`.
+
+For standing coordination and multiple PRs, use `playbooks/coordination.md`. Do not open a PR merely because a playbook ended.
 
 ## Apply principles by consequence
 
 Use `references/principles.md` as a decision index. Apply only principles that
-change a real choice. In the final reply, name each applied principle and the
-choice it changed. Do not list principles as decoration.
+change a real choice. Explain consequential choices in ordinary language. Name a principle only when that helps the user assess the choice.
 
 ## Write for the reader
 

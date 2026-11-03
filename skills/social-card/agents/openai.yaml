@@ -1,0 +1,4 @@
+interface:
+  display_name: "Social Card"
+  short_description: "Frame supplied images on a social background"
+  default_prompt: "Use $social-card for this task."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Principle Separate Before Serializing Shared State"
+  short_description: "Pstack workflow: principle separate before serializing shared st"
+  default_prompt: "Use $principle-separate-before-serializing-shared-state for this task."

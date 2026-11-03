@@ -1,0 +1,4 @@
+interface:
+  display_name: "Benchmark Checklist"
+  short_description: "Pstack workflow: benchmark checklist"
+  default_prompt: "Use $benchmark-checklist for this task."

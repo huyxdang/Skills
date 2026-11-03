@@ -1,0 +1,4 @@
+interface:
+  display_name: "Correct"
+  short_description: "Pstack workflow: correct"
+  default_prompt: "Use $correct for this task."
