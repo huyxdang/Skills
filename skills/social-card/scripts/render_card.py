@@ -26,9 +26,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("output", type=Path, help="Destination .png, .jpg, or .webp")
     parser.add_argument(
         "--preset",
-        choices=PRESETS,
-        default="social-landscape",
-        help="Canvas format. Default: social-landscape (1600x900)",
+        choices=("source", *PRESETS),
+        default="source",
+        help="Canvas format. Default: source proportions with 80px padding (max 1600px edge)",
     )
     return parser.parse_args()
 
@@ -73,21 +73,24 @@ def scaled_source(
 
 
 def render(input_path: Path, background_path: Path, preset: str) -> Image.Image:
-    canvas_size = PRESETS[preset]
+    source = load_source(input_path)
+    if preset == "source":
+        if max(source.size) > 1440:
+            source = scaled_source(source, (1440, 1440))
+        canvas_margin = 80
+        canvas_size = (source.width + 2 * canvas_margin, source.height + 2 * canvas_margin)
+    else:
+        canvas_size = PRESETS[preset]
+        canvas_margin = round(min(canvas_size) * 0.035)
+        source = scaled_source(
+            source,
+            (canvas_size[0] - 2 * canvas_margin, canvas_size[1] - 2 * canvas_margin),
+        )
     width, height = canvas_size
 
     with Image.open(background_path) as raw_background:
         background = cover(raw_background.convert("RGB"), canvas_size)
     canvas = background.convert("RGBA")
-
-    source = load_source(input_path)
-    canvas_margin = round(min(width, height) * 0.035)
-
-    max_source_size = (
-        width - 2 * canvas_margin,
-        height - 2 * canvas_margin,
-    )
-    source = scaled_source(source, max_source_size)
 
     corner_radius = max(18, round(min(source.size) * 0.036))
     source_x = (width - source.width) // 2
